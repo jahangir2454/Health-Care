@@ -1,0 +1,118 @@
+.footer{
+    background: #1e1e1e;
+    padding: 30px 0;
+}
+.footer img{
+    width: 60px;
+}
+.footer span{
+    font-size: 20px;
+    color: #acacac;
+    margin-left: 3px;
+}
+.footer-font{
+    color: #89be16 !important;
+}
+.footer p{
+    color: #acacac;
+    margin: 19px 0;
+}
+.all-btn{
+    border: none;
+    outline: none;
+    background: none;
+    border: 1px solid #89be16;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    z-index: 4;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+.all-btn:hover{
+    color: #1e1e1e;
+}
+.all-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #89be16;
+    border-radius: 17px;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+.all-btn:hover:after{
+    width: 100%;
+ 
+}
+.footer-icon-container i{
+    height:35px;
+    width: 35px;
+    border: 1px solid #89be16;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height:35px;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.footer-icon-container i:hover{
+    background: #89be16;
+    transform: translatey(-6px);
+}
+/* footer pages */
+.footer-pages h3{
+    color:#acacac;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-pages h3::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    border-bottom: 3px solid #89be16;
+    border-radius: 24px;
+}
+.footer-pages p{
+    font-size: 14px;
+    color: #acacac;
+    margin: 0;
+    border-bottom: 1px dashed #89be16;
+    padding:8px 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.footer-pages p:hover{
+    color: #89be16;
+    transform: translate(5px);
+}
+.footer-input input{
+    background: none;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+.footer-input input:focus{
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background:#fff;
+    border: 1px solid #89be16;
+}
+.footer-send {
+    background: none;
+    border: none !important;
+    outline: none;
+    background:#89be16 !important;
+    color:#fff !important;
+    cursor: pointer;
+}
+ 
