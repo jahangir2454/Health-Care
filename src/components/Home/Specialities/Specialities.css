@@ -1,0 +1,89 @@
+.specialities-content{
+    text-align: center;
+}
+.specialities-content h2{
+    font-size: 30px;
+    color: #191919;
+    font-weight: 700;
+    padding-bottom: px;
+}
+.specialities-content h2 span{
+    color: #89be16 !important;
+}
+.specialities-content h5{
+    font-size: 16px;
+    color: #494848;
+    font-weight: 400;
+}
+.spec-icon col{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.spec-icon-item{
+    border: 1px solid #89be16;
+    padding: 20px;
+    
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+.spec-icon-item:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 0%;
+    background:#89be16;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+.spec-icon-item:hover:after{
+    width: 100%;
+}
+.spec-icon-item:hover{
+    background: #89be16;
+}
+.spec-icon-item:hover i{
+    color: #fff;
+}
+.spec-icon-item:hover p{
+    color: #fff;
+}
+.spec-icon-item i{
+    font-size: 40px;
+    color: #89be16;
+    transition: 0.5s ease-in-out;
+}
+.spec-icon-item p{
+    font-weight: 500;
+    font-size: 20px;
+    color: #191919;
+    transition: 0.5s ease-in-out;
+}
+.spec-items{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 20px;
+}
+.spec-detalis i{
+    color: #89be16;
+    margin-right: 8px;
+    font-size: 20px;
+    padding: 5px 0;
+}
+.spec-ortho h3{
+    color: #c8c8c8;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.spec-ortho h2{
+    color: #555555;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}

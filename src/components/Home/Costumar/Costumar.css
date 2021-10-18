@@ -1,0 +1,74 @@
+.customers-heading h2{
+     color: #555555;
+     font-size: 35px;
+}
+.customers-heading h4{
+     color: #c8c8c8;
+     font-size: 20px;
+     font-weight: 400;
+}
+.customer-icon{
+    text-align: center;
+    border-radius:50%;
+    padding: 0 10px;
+    height:200px;
+    width: 200px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+}
+.customer-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background: #89be16;
+    z-index: -1;
+    border-radius:50%;
+    transition: 0.5s ease-in-out;
+}
+.customer-icon:hover:after{
+    height:100%;
+}
+.customer-icon:hover i{
+    color: #fff;
+}
+.customer-icon:hover h3{
+    color: #fff;
+}
+.customer-icon:hover h4{
+    color: #fff;
+    
+}
+.customer-icon:hover h5{
+     margin: 0 auto;
+     border-bottom: 3px solid #fff;
+     border-radius: 10px;
+     width: 40%;
+}
+.customer-icon i{
+    font-size: 30px;
+    color: #89be16;
+}
+.customer-icon h3{
+    font-size: 25px;
+    color: #555555;
+}
+.customer-icon h5{
+    margin: 0 auto;
+    border-bottom: 3px solid #89be16;
+    border-radius: 10px;
+    width: 40%;
+}
+.customer-icon h4{
+    color: #555555;
+    font-size: 20px;
+}

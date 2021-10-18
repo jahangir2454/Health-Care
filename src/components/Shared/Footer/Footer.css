@@ -24,13 +24,13 @@
     border: 1px solid #89be16;
     padding: 8px 15px;
     border-radius: 20px;
-    color: #fff;
+    color: rgb(119, 118, 118);
     z-index: 4;
     transition: 0.5s ease-in-out;
     position: relative;
 }
 .all-btn:hover{
-    color: #1e1e1e;
+    color: #fff;
 }
 .all-btn::after{
     content: "";

@@ -52,4 +52,11 @@ background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
 
 box-shadow: 0px 25px 40px #1687d933;
 
+     #c8c8c8
+    #555555
+    #77777
+
+
+https://i.ibb.co/V32QnYF/doctors-5.jpg
+
 */
