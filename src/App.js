@@ -7,6 +7,8 @@ import About from './components/About/About';
 import Services from './components/Services/Services';
 import Doctors from './components/Doctors/Doctors';
 import Footer from './components/Shared/Footer/Footer';
+import SigIn from './components/SignIn/SigIn';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   return (
@@ -28,6 +30,12 @@ function App() {
           </Route>
           <Route path="/doctors">
             <Doctors></Doctors>
+          </Route>
+          <Route path="/signIn">
+            <SigIn></SigIn>
+          </Route>
+          <Route path="/signUp">
+            <SignUp></SignUp>
           </Route>
         </Switch>
         <Footer></Footer>
