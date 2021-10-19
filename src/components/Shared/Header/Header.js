@@ -2,15 +2,19 @@
 import React from 'react';
 import { Container, Nav, Navbar, } from 'react-bootstrap';
 import { NavLink,useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
+
 import './Header.css'
 
 const Header = () => {
+    const { user,signout } = useAuth();
     const history = useHistory()
     const hendelSign = () => {
         history.push('/signIn')
     }
     const hendelSingUp = () => {
         history.push('/signUp')
+        console.log(user)
     }
     return (
         <div>
@@ -27,9 +31,10 @@ const Header = () => {
                             <NavLink to="/home">Home</NavLink>
                             <NavLink to="/about">About</NavLink>
                             <NavLink to="/doctors">Doctors</NavLink>
-                            <NavLink to="/services">Services</NavLink>
-                                <button onClick={hendelSign} className="sign-btn me-2">Sign In</button>
-                                <button onClick={hendelSingUp} className="sign-btn">Sign Up</button>
+                                <NavLink to="/services">Services</NavLink>
+                               {user.email&& <button onClick={signout} className="sign-btn me-2">logout</button>}
+                                {!user.email &&<button onClick={hendelSign} className="sign-btn me-2">Sign In</button>}
+                                {!user.email&&<button className="m-sm-3" onClick={hendelSingUp} className="sign-btn">Sign Up</button>}
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

@@ -1,0 +1,14 @@
+.doctor-wrepar{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+@media only screen and (max-width:576px) {
+    .doctor-wrepar {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+        overflow-y: hidden;
+        margin: 0 10px;
+    }
+}

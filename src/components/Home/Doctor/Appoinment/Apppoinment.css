@@ -1,0 +1,26 @@
+.appoinment-img{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.appo-card{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translatey(-50%);
+}
+.appo-card h2{
+    color: #89be16;
+    font-size: 35px;
+}
+.appo-card p{
+    color: #555555;
+    font-size: 16px;
+}
+.make-appointment h3{
+    color: #89be16;
+}
+.make-appointment p{
+    color: #555555;
+}

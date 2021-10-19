@@ -9,11 +9,17 @@ import Doctors from './components/Doctors/Doctors';
 import Footer from './components/Shared/Footer/Footer';
 import SigIn from './components/SignIn/SigIn';
 import SignUp from './components/SignUp/SignUp';
+import AuthProvider from './Context/AuthProvider';
+import ServicesDatelis from './components/Home/Services/ServicesDatelis/ServicesDatelis';
+import Appoinment from './components/Home/Doctor/Appoinment/Appoinment';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
 
 function App() {
   return (
     <div className="">
-      <BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
         <Header></Header>
         <Switch>
           <Route exact path="/">
@@ -28,18 +34,29 @@ function App() {
           <Route path="/services">
             <Services></Services>
           </Route>
-          <Route path="/doctors">
+          <PrivateRoute path="/doctors/:docId">
             <Doctors></Doctors>
-          </Route>
+            </PrivateRoute>
+            <Route path="/doctors">
+              <Appoinment></Appoinment>
+            </Route>
+            <Route path="/appointment">
+              <Appoinment></Appoinment>
+            </Route>
           <Route path="/signIn">
             <SigIn></SigIn>
           </Route>
           <Route path="/signUp">
             <SignUp></SignUp>
-          </Route>
+            </Route>
+            <PrivateRoute path="/serv/:id">
+              <ServicesDatelis></ServicesDatelis>
+            </PrivateRoute>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
+
     </div>
   );
 }

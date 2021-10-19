@@ -1,0 +1,25 @@
+.card-service-heading h2{
+    color: #555555;
+}
+.card-service-heading p{
+    color: #747474;
+}
+.emergency{
+    background:#fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 15px 8px;
+}
+.emergency i{
+    font-size: 40px;
+    color: #89be16;
+}
+.emergency h2{
+    font-size: 20px;
+    color: #89be16;
+    font-weight: 700;
+}
+.emergency p{
+    font-size: 14px;
+    color: #747474;
+}

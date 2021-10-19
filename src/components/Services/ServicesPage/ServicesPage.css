@@ -1,0 +1,34 @@
+.ser-page img{
+    height:400px;
+}
+.ser-page {
+     position: relative;
+}
+.ser-page::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.562);
+}
+.service-banner-headding{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.service-banner-headding h3{
+    font-size:35px;
+    color: #89be16;
+}
+.service-banner-headding a{
+    font-size:16px;
+    color: #fff;
+    text-decoration: none;
+}
+.service-banner-headding a:hover{
+    color: #fff;
+}

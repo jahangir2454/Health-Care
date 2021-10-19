@@ -10,3 +10,98 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 25px;
 }
+.sign-in-from-items{
+    text-align: center;
+}
+.sign-in-from-items h3{
+    color: #89be16;
+}
+.sign-in-from-items h2{
+    color: #191919de;
+    font-weight: 700;
+}
+.sign-in-from-items h4{
+    color: #c8c8c8;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.sign-from {
+    padding: 10px 30px;
+}
+.sign-in-submit{
+    width: 100%;
+    margin: 0 auto;
+   text-align: center;
+}
+.sign-in-submit input{
+    border: none;
+    outline: none;
+    background: none;
+    background: #89be16;
+    border-radius:20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    width: 50%;
+}
+.sign-in-check a{
+    text-decoration: none;
+    color: #89be16;
+    transition: 0.5s ease-in-out;
+    font-weight: 600;
+}
+.sign-in-check a:hover{
+    color: #89be16;
+}
+.sign-from textarea,
+.sign-from input{
+    outline:none;
+    display: block;
+    width: 100%;
+    border: none;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+.sign-from textarea:focus,
+.sign-from input:focus{
+    box-shadow:none;
+    border: none;
+    outline: none;
+    background: none;
+    border: #89be16 1px solid ;
+}
+.change-page-sign a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(168, 168, 168);
+}
+.change-page-sign a:hover{
+    color: rgb(168, 168, 168);
+}
+.change-page-sign a span{
+    color: #89be16 !important;
+}
+.error{
+    color: red;
+}
+.sign-in-google img{
+    height:30px;
+    width: 30px;
+}
+.sign-in-google{
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 8px 20px;
+    border-radius:20px;
+    cursor: pointer;
+}
+.sign-in-google h6{
+    color: #89be16;
+}

@@ -1,0 +1,31 @@
+.doc-datelis-itms{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+.doc-datelis-itms h6{
+    margin-right: 40px;
+    color: #89be16;
+}
+.datelis-doc h3{
+    color: #555555;
+}
+.datelis-doc h4{
+    color: #89be16;
+    font-size: 18px;
+}
+.availability {
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #fff;
+}
+.availability span{
+    color: #89be16 !important;
+}
+.availability h4{
+    color: #555555;
+}
+.avail{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}

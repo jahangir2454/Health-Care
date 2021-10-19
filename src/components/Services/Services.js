@@ -1,9 +1,16 @@
 import React from 'react';
+import Costumar from '../Home/Costumar/Costumar';
+import CardServices from '../Home/Services/CardServices/CardServices';
+import Price from './Price/Price';
+import ServicesPage from './ServicesPage/ServicesPage';
 
 const Services = () => {
     return (
         <div>
-            <h3>this is services</h3>
+            <ServicesPage></ServicesPage>
+            <Price></Price>
+            <CardServices></CardServices>
+           <Costumar></Costumar>
         </div>
     );
 };

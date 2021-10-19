@@ -1,9 +1,10 @@
 import React from 'react';
+import Costumar from '../Home/Costumar/Costumar';
 
 const About = () => {
     return (
         <div>
-            <h3>This is about</h3>
+            <Costumar></Costumar>
         </div>
     );
 };

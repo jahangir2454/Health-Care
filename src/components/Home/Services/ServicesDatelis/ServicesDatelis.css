@@ -1,0 +1,38 @@
+.datelis-img{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+}
+.count-detalis{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 110px;
+    height: 45px;
+    border: none;
+    padding: 0 10px;
+    font-size: 17px;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 1px solid #89be16;
+    border-radius:20px;
+}
+.count-detalis h5{
+    margin: 0 7px;
+}
+.fa-window-minimize{
+    margin-top: -10px;
+    cursor: pointer;
+}
+.fa-plus{
+    cursor: pointer;
+}
+/* .count-detalis span{
+    font-size: 30px !important;
+    
+    margin-bottom:10px !important;
+    color: #89be16;
+    font-weight: bold;
+} */

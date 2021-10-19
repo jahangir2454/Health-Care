@@ -9,23 +9,23 @@ const Specialities = () => {
                 <h2>Our <span>Specialities</span></h2>
                 <h5>Great one let abundantly sixth let were one earth were him after tree seed over.</h5>
                 <Row className="spec-icon mt-4">
-                    <Col className="spec-icon-item">
+                    <Col sm={3} className="spec-icon-item">
                         <i class="fas fa-file-medical"></i>
                         <p>Orthopaedics</p>
                     </Col>
-                    <Col className="spec-icon-item" >
+                    <Col sm={3}  className="spec-icon-item" >
                         <i class="fas fa-user-md"></i>
                         <p>Cardiology</p>
                     </Col>
-                    <Col className="spec-icon-item" >
+                    <Col sm={3}  className="spec-icon-item" >
                         <i class="fas fa-medkit"></i>
                         <p>Neurology</p>
                     </Col>
-                        <Col className="spec-icon-item" >
+                        <Col sm={3}  className="spec-icon-item" >
                         <i class="fas fa-x-ray"></i>
                         <p>x-ray</p>
                     </Col>
-                    <Col  className="spec-icon-item">
+                    <Col  sm={3}  className="spec-icon-item">
                         <i class="fas fa-procedures"></i>
                         <p>procedures</p>
                     </Col>
