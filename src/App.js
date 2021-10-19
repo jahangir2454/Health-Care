@@ -13,6 +13,7 @@ import AuthProvider from './Context/AuthProvider';
 import ServicesDatelis from './components/Home/Services/ServicesDatelis/ServicesDatelis';
 import Appoinment from './components/Home/Doctor/Appoinment/Appoinment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFount/NotFound';
 
 
 function App() {
@@ -52,8 +53,11 @@ function App() {
             <PrivateRoute path="/serv/:id">
               <ServicesDatelis></ServicesDatelis>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
         </Switch>
-        <Footer></Footer>
+          <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>
 
@@ -62,26 +66,3 @@ function App() {
 }
 
 export default App;
-
-
-
-/* 
-#00a3c8
-
-#89be16
-
-#acacac
-#1e1e1e
-
-background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
-
-box-shadow: 0px 25px 40px #1687d933;
-
-     #c8c8c8
-    #555555
-    #77777
-
-
-https://i.ibb.co/V32QnYF/doctors-5.jpg
-
-*/
