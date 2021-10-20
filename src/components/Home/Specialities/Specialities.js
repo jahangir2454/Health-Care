@@ -33,10 +33,10 @@ const Specialities = () => {
             </Container>
             <Container className="spec-items">
                  <Row>
-                    <Col>
+                    <Col md={6} xs={12}>
                     <img className=" w-100" src="https://i.ibb.co/41CL40N/1.jpg" alt="" />
                     </Col>
-                    <Col className="mt-5 px-5 spec-ortho">
+                    <Col md={6} xs={12} className="mt-5 px-5 spec-ortho">
                         <div>
                             <h3>Services</h3>
                             <h2>Orthopaedics</h2>

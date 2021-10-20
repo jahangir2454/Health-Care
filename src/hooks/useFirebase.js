@@ -1,23 +1,42 @@
 import FirebaseAuth from "../firebase/firebase.init";
-import { GoogleAuthProvider,signInWithPopup, getAuth,onAuthStateChanged,createUserWithEmailAndPassword ,signOut} from "firebase/auth";
+import { GoogleAuthProvider,signInWithPopup, getAuth,onAuthStateChanged,signInWithEmailAndPassword  ,signOut,createUserWithEmailAndPassword} from "firebase/auth";
 import { useEffect, useState } from "react";
 FirebaseAuth()
 const useFirebase = () => {
     const [user, setUser] = useState({})
-    const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
     const [datelis, setDatelis] = useState([])
     const [doctor, setDoctor] = useState([])
-    
+    const [error, setError] = useState('')
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     // google sign in
     const googleSignIn = () => {
-        signInWithPopup(auth,googleProvider)
+       return signInWithPopup(auth, googleProvider);
+        
+    }
+
+    const createUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user)
-        })
+                setError("")
+            }).catch(error => {
+                setError(error.message)
+            })
     }
+    // 
+    const signInuser = (email, password) => {
+        
+        signInWithEmailAndPassword (auth, email, password)
+            .then(result => {
+                setUser(result.user)
+                setError('')
+            }).catch(error => {
+                setError(error.message)
+            })
+    }
+
+    // 
     // sign in part of the
     const signout = () => {
         signOut(auth)
@@ -47,10 +66,12 @@ const useFirebase = () => {
     }, [])
     
     return {
-        setEmail,
         signout,
-        setPassword,
         datelis,
+        createUser,
+        signInuser,
+        error,
+        setError,
         user,
         doctor,
         googleSignIn,

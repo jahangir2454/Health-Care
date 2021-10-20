@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useHistory,useLocation } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
-import { set } from 'react-hook-form';
+
+import './SignUp.css'
 
 
 const SignUp = () => {
-    const auth = getAuth();
     const [name, setName] = useState('')
-    const [error,setError] = useState('')
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
-    const {googleSignIn}= useAuth()
+    const { googleSignIn, createUser, error, setError } = useAuth()
+    const history = useHistory()
+    const location = useLocation()
+    const redirect = location.state?.from || '/home';
     const hendelPass = () => {
         alert('Please Chack your Email')
     }
@@ -29,17 +31,20 @@ const SignUp = () => {
      
     const hendelsubmit = (e) => {
         e.preventDefault();
-        if (password < 6) {
+        if (password.length < 6) {
            setError('password must be at least 6 characters')
             return;
+        } if (password.length > 6) {
+            setError('')
         }
-        createUserWithEmailAndPassword(auth, email, password)
+           createUser(email, password)
+    }
+    const hendelSubmit = () => {
+        googleSignIn()
             .then(result => {
-                const user = result.user;
-                console.log(user)
-                setError('')
-            }).catch(error => {
-            setError("This email Already create a accout")
+            history.push(redirect)
+            }).catch(err => {
+            setError(err.message)
         })
     }
     return (
@@ -53,7 +58,7 @@ const SignUp = () => {
                                 <div className="sign-in-from-items">
                                 <h3>Family Health Care</h3>
                                 <h2>Create a account</h2>
-                                    <div onClick ={googleSignIn}
+                                    <div onClick ={hendelSubmit}
                                      className="d-flex justify-content-between sign-in-google">
                                         <img src="https://i.ibb.co/xG1H7VS/google-symbol.png" alt="" />
                                         <h6>Sign In With Google</h6>
@@ -73,15 +78,14 @@ const SignUp = () => {
                                     <Form.Label>Password:</Form.Label>
                                     <Form.Control onBlur={hendelPassword} type="password" placeholder="Enter password" required/>
                                             
-                                    {/* <Form.Label>Confirm Password:</Form.Label>
-                                    <Form.Control type="password" placeholder="confirm password" required/>        */}
                                 </div>
                                     <div className="d-flex justify-content-around sign-in-check">
                                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                         <Form.Check type="checkbox" label="Remember Me" />
                                          </Form.Group>
                                         <Link onClick={hendelPass} to="/signUp">Forgot Password ?</Link>
-                                    </div>
+                                        </div>
+                                        <p className="error-han">{error}</p>
                                 <div className="sign-in-submit my-3">
                                         <input  type="submit" />
                                     </div>

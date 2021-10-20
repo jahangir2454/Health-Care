@@ -15,8 +15,8 @@ const Price = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={4}>
-                        <div className="price-card">
+                    <Col md={4} >
+                        <div className="price-card my-3">
                             <h3>Dental Care</h3>
                             <h5>Hurry to grap your offer now</h5>
                             <h1>$35</h1>
@@ -28,7 +28,7 @@ const Price = () => {
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div className="price-card">
+                        <div className="price-card my-3">
                             <h3>Blood Test</h3>
                             <h5>Hurry to grap your offer now</h5>
                             <h1>$55</h1>
@@ -40,7 +40,7 @@ const Price = () => {
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div className="price-card">
+                        <div className="price-card my-3">
                             <h3>Medical Checkup</h3>
                             <h5>Hurry to grap your offer now</h5>
                             <h1>$70</h1>
